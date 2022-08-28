@@ -4,6 +4,8 @@ import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import ContextProvider from './Config/context';
+import './index.css';
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
@@ -11,7 +13,9 @@ const root = ReactDOM.createRoot(container);
 root.render(
   <StrictMode>
     <ColorModeScript />
-    <App />
+    <ContextProvider>
+      <App />
+    </ContextProvider>
   </StrictMode>
 );
 
